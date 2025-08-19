@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}SQLi Demo{% endblock %}
+
+{% block content %}
+  <h1>SQL Injection Demo</h1>
+  <form class="form" method="get" action="/sqli">
+    <label>Search (unsafe):
+      <input class="input" type="text" name="q" value="{{ q }}" placeholder="e.g. ' OR '1'='1 --" />
+    </label>
+    <button class="button" type="submit">Search</button>
+  </form>
+
+  {% if error_msg %}
+    <div class="alert error">Error: {{ error_msg }}</div>
+  {% endif %}
+
+  {% if results %}
+    <div class="table-wrapper">
+      <table class="table">
+        <thead><tr><th>ID</th><th>Username</th><th>Email</th></tr></thead>
+        <tbody>
+          {% for r in results %}
+          <tr>
+            <td>{{ r[0] }}</td>
+            <td>{{ r[1] }}</td>
+            <td>{{ r[2] }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% elif q %}
+    <p>No results found.</p>
+  {% endif %}
+{% endblock %}
+
+
+
+

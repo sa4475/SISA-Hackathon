@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}AI Security Demos{% endblock %}
+
+{% block content %}
+  <section class="hero">
+    <h1>AI Security Hackathon Demos</h1>
+    <p>Explore intentionally vulnerable examples for learning and testing defenses.</p>
+  </section>
+
+  <section class="card-grid">
+    <article class="card">
+      <h2>XSS Demo</h2>
+      <p>Pass reflected payload via query: <code>?payload=&lt;svg onload=alert(1)&gt;</code></p>
+      <a class="button" href="/xss?payload=%3Csvg%20onload%3Dalert(1)%3E">Open XSS demo</a>
+    </article>
+
+    <article class="card">
+      <h2>SSTI Demo</h2>
+      <p>Render attacker-controlled template: <code>?template={{7*7}}</code></p>
+      <a class="button" href="/ssti?template=%7B%7B7*7%7D%7D">Open SSTI demo</a>
+    </article>
+
+    <article class="card">
+      <h2>SQLi Demo</h2>
+      <p>Unsafe search over SQLite: try <code>?q=' OR '1'='1 --</code></p>
+      <a class="button" href="/sqli?q=%27%20OR%20%271%27%3D%271%27%20--">Open SQLi demo</a>
+    </article>
+  </section>
+{% endblock %}
+
+
+
+

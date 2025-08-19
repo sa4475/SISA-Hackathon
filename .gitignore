@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Environments
+.venv/
+venv/
+env/
+
+# Editor/OS
+.vscode/
+.idea/
+.DS_Store
+
+# App artifacts
+out/
+*.log
+attack_chain.png
+attack_chain.mmd
+webapp_demo.sqlite3
+webapp/demo.db
+

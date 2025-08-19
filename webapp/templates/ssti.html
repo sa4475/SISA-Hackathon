@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}SSTI Demo{% endblock %}
+
+{% block content %}
+  <h1>SSTI Demo</h1>
+  <p>Renders the attacker-controlled template string.</p>
+  <div class="key-value"><strong>Template:</strong> <code>{{ template_text }}</code></div>
+  <div class="section-label"><strong>Rendered output:</strong></div>
+  <div class="panel">{{ rendered }}</div>
+{% endblock %}
+
+
+
+
