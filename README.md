@@ -40,6 +40,8 @@ Open `http://127.0.0.1:8000`.
 ## Helper scripts
 - `run_all.ps1`: runs all demos and saves outputs in `out/`
 - `recon_ai.py`, `exploit_ai.py`, `defense_anomaly.py`, `attack_chain_sim.py`
+- `credential_theft_sim.py`, `openai_prompt_injection.py`, `data_poisoning_demo.py`, `model_extraction_sim.py`
+- `adversarial_input_demo.py`, `dos_attack_sim.py`, `privacy_leakage_test.py`, `social_engineering_demo.py`
 
 Run all:
 ```powershell
